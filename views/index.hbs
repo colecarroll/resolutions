@@ -1,4 +1,21 @@
+<h1>Add a resolution for 2018!</h1>
+
 {{#each data}}
-<h1>{{name}}</h1>
+<h3>{{name}}</h3>
 <p>{{content}}</p>
+<a href="/{{id}}">
+  <button>Edit Resolution</button>
+</a>
+<form action="/delete/{{id}}?_method=DELETE" method="POST">
+  <button type='submit'>Delete Resolution</button>
+</form>
 {{/each}}
+
+<h4>Add your resolution</h4>
+<form action="/add" method="POST">
+  <label for="name">Name</label>
+  <input type="text" name='name'>
+  <label for="content">Resolution</label>
+  <input type="text" name='content'>
+  <button type='submit'>Submit</button>
+</form>

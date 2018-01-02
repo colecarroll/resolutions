@@ -1,0 +1,10 @@
+<h1>Edit your resolution</h1>
+
+<form action="/edit/{{person.id}}?_method=PUT" method="POST">
+  <input type="hidden" value={{person.id}}>
+  <label for="name">Name: </label>
+  <input type="text" name='name' placeholder="{{person.name}}" />
+  <label for="content">Your Resolution: </label>
+  <input type="text" name='content' placeholder="{{person.content}}" />
+  <button type='submit'>Update</button>
+</form>
